@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Profesional</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            /* Colores Base - Gama Lila/Violeta */
+            --primary: #6c5ce7;    
+            --accent: #a29bfe;     
+            --bg: #f9f9fb;         
+            --white: #ffffff;
+            --text: #2d3436;
+            
+            /* Colores de Botones Específicos */
+            --btn-azul: #3498db;
+            --btn-violeta: #8e44ad;
+            --btn-verde: #27ae60;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            color: var(--text);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px;
+            background: var(--white);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(108, 92, 231, 0.15);
+            overflow: hidden;
+            position: relative; /* Necesario para ubicar el botón de ingreso */
+        }
+
+        /* Estilo específico para el botón de Ingreso Profesional */
+        .login-profesional {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(5px);
+            z-index: 10;
+            transition: all 0.3s;
+        }
+
+        .login-profesional:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Cabecera Violeta */
+        .header-card {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            height: 130px;
+            position: relative;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            position: absolute;
+            bottom: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 75px 25px 30px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+
+        .specialty {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: #636e72;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 0.85rem;
+            color: #b2bec3;
+        }
+
+        /* Botones con colores específicos y Hover */
+        .action-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 22px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn-turno { background-color: #ebf5fb; color: var(--btn-azul); }
+        .btn-turno:hover { background-color: var(--btn-azul); color: white; transform: translateY(-2px); }
+
+        .btn-informe { background-color: #f5eef8; color: var(--btn-violeta); }
+        .btn-informe:hover { background-color: var(--btn-violeta); color: white; transform: translateY(-2px); }
+
+        .btn-med { background-color: #e9f7ef; color: var(--btn-verde); }
+        .btn-med:hover { background-color: var(--btn-verde); color: white; transform: translateY(-2px); }
+
+        .footer {
+            margin-top: 35px;
+            font-size: 0.75rem;
+            color: #b2bec3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="https://script.google.com/macros/s/AKfycbzvJrvwU_wochOoBNHRvFcg0JMQkdbiI_reuKGX-21GlExWOMnZ_JoMdrA89nk9CHRY/exec?page=profesional&medico=lilianastampella" class="login-profesional">
+        <i class="fas fa-lock"></i> INGRESO PROFESIONAL
+    </a>
+
+<div class="container">
+    <div class="header-card">
+        <img src="urlbase64" alt="Foto de perfil" class="profile-pic">
+    </div>
+
+    <div class="content">
+        <h1>Psi. Liliana Stampella</h1>
+        <span class="specialty">Psicóloga - Psicoanalista</span>
+        
+        <p class="bio">
+            Dedicado a brindar atención integral y personalizada. Mi enfoque combina el trabajo profesional con la calidez humana para acompañar tu bienestar.
+        </p>
+
+        <div class="contact-info">
+            <div class="contact-item"><i class="fas fa-id-badge"></i> MP: 5008</div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Rosario, Sta Fe</div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid #eee; margin-bottom: 25px;">
+
+<div class="action-panel">
+    <a href="https://wa.me/5493413731111" class="btn btn-turno">
+        <span><i class="far fa-calendar-check"></i> &nbsp; Solicitar Turno</span>
+        <i class="fas fa-chevron-right"></i>
+    </a>
+
+    <a href="https://script.google.com/macros/s/AKfycbzvJrvwU_wochOoBNHRvFcg0JMQkdbiI_reuKGX-21GlExWOMnZ_JoMdrA89nk9CHRY/exec?page=solicitud&medico=lilianastampella" class="btn btn-informe">
+        <span><i class="far fa-file-alt"></i> &nbsp; Solicitar Informe</span>
+        <i class="fas fa-chevron-right"></i>
+    </a>
+
+    <a href="mailto:doctor@email.com?subject=Solicitud de Medicacion" class="btn btn-med">
+        <span><i class="fas fa-pills"></i> &nbsp; Solicitar Medicación</span>
+        <i class="fas fa-chevron-right"></i>
+    </a>
+</div>
+
+        <div class="footer">
+            SISTEMA DE GESTIÓN PROFESIONAL
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
