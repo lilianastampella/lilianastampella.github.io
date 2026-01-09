@@ -159,6 +159,79 @@
 </head>
 <body>
 
+<!-- MODAL AVISO LEGAL -->
+<div id="legalModal" style="
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.6);
+    z-index:9999;
+    align-items:center;
+    justify-content:center;
+">
+
+    <div style="
+        background:#fff;
+        max-width:500px;
+        width:90%;
+        border-radius:18px;
+        padding:25px;
+        font-size:0.85rem;
+        line-height:1.5;
+        color:#2d3436;
+        box-shadow:0 20px 40px rgba(0,0,0,0.2);
+        position:relative;
+    ">
+
+        <h3 style="margin-top:0; color:#6c5ce7;">
+            Aviso legal
+        </h3>
+
+        <!-- PENDIENTE_2 -->
+        <p>
+            Esta plataforma es una <strong>herramienta administrativa y de automatización documental</strong>
+            que opera sobre servicios de Google (Docs, Drive y Sheets).
+        </p>
+
+        <p>
+            Su uso está destinado exclusivamente a <strong>profesionales habilitados</strong>, quienes utilizan
+            el sistema bajo su <strong>exclusiva responsabilidad profesional</strong>.
+        </p>
+
+        <p>
+            La plataforma no realiza diagnósticos, no sugiere tratamientos, no emite prescripciones médicas
+            ni toma decisiones clínicas de ningún tipo.
+        </p>
+
+        <p>
+            Toda la información contenida en los informes, documentos y comunicaciones es ingresada,
+            verificada y validada por el profesional interviniente.
+        </p>
+
+        <p>
+            PLATAFORMA INDIGO actúa únicamente como un medio técnico de organización,
+            generación y trazabilidad documental.
+        </p>
+
+        <button id="closeLegal" style="
+            margin-top:15px;
+            background:#6c5ce7;
+            color:white;
+            border:none;
+            padding:10px 18px;
+            border-radius:12px;
+            cursor:pointer;
+            font-weight:600;
+        ">
+            Cerrar
+        </button>
+
+    </div>
+</div>
+
+
+    
+
 <div class="container">
     <a href="https://script.google.com/macros/s/AKfycbyBmChklNZ-Mt2AMqQeXlwR_odQ7KW_oVdb3yhQ0lTJpfnbSqlWjO407g_G-LuohQzQ3g/exec?page=profesional&medico=zlilianastampellapsi" class="login-profesional">
         <i class="fas fa-lock"></i> INGRESO PROFESIONAL
@@ -201,14 +274,44 @@
     </a>
 </div>
 
-        <div class="footer">
-            PLATAFORMA INDIGO
-        </div>
+<div class="footer">
+    PLATAFORMA INDIGO · 
+    <a href="#" id="openLegal" style="color:#6c5ce7; text-decoration:none; font-weight:600;">
+        Aviso legal
+    </a>
+</div>
+
     </div>
 </div>
 
+
+<script>
+    const openLegal = document.getElementById("openLegal");
+    const legalModal = document.getElementById("legalModal");
+    const closeLegal = document.getElementById("closeLegal");
+
+    openLegal.onclick = (e) => {
+        e.preventDefault();
+        legalModal.style.display = "flex";
+    };
+
+    closeLegal.onclick = () => {
+        legalModal.style.display = "none";
+    };
+
+    legalModal.onclick = (e) => {
+        if (e.target === legalModal) {
+            legalModal.style.display = "none";
+        }
+    };
+</script>
+
+
+
+    
 </body>
 </html>
+
 
 
 
