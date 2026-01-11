@@ -169,6 +169,14 @@ body{
 }
 
 
+.legal-link{
+    color:#6c5ce7;
+    font-weight:600;
+    cursor:pointer;
+}
+.legal-link:hover{
+    text-decoration:underline;
+}
 
 
 .container{
@@ -307,7 +315,11 @@ h1{margin:0;font-size:1.6rem;color:var(--primary);}
 
 </div>
 
-<div class="footer">PLATAFORMA INDIGO</div>
+<div class="footer">
+    PLATAFORMA INDIGO · 
+    <span class="legal-link" onclick="showView('legal')">Aviso legal</span>
+</div>
+
 </section>
 
 <!-- CONSULTORIOS -->
@@ -329,6 +341,64 @@ h1{margin:0;font-size:1.6rem;color:var(--primary);}
 
 <div class="back-link" onclick="showView('inicio')">VOLVER</div>
 </section>
+
+
+<!-- AVISO LEGAL -->
+<section id="legal" class="view">
+
+<h1 style="color:#6c5ce7;">Aviso legal</h1>
+
+<div style="
+    margin-top:20px;
+    font-size:.9rem;
+    line-height:1.55;
+    color:#4a4a4a;
+    text-align:left;
+">
+
+<p>
+Esta plataforma es una <strong>herramienta administrativa y de automatización documental</strong>
+que opera sobre servicios de Google (Docs, Drive y Sheets).
+</p>
+
+<p>
+Su uso está destinado exclusivamente a <strong>profesionales habilitados</strong>,
+quienes utilizan el sistema bajo su <strong>exclusiva responsabilidad profesional</strong>.
+</p>
+
+<p>
+La plataforma no realiza diagnósticos, no sugiere tratamientos, no emite prescripciones médicas
+ni toma decisiones clínicas de ningún tipo.
+</p>
+
+<p>
+Toda la información contenida en los informes, documentos y comunicaciones es ingresada por
+el profesional interviniente o por terceros autorizados (pacientes, personal administrativo
+o institucional), y es revisada, validada y utilizada bajo la exclusiva responsabilidad del profesional.
+</p>
+
+<p>
+PLATAFORMA INDIGO actúa únicamente como un medio técnico de organización, generación y
+trazabilidad documental.
+</p>
+
+<button onclick="showView('inicio')" style="
+    margin-top:15px;
+    background:#6c5ce7;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:600;
+">
+Cerrar
+</button>
+
+</div>
+</section>
+
+
 
 </div>
 </div>
